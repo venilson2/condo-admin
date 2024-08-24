@@ -1,0 +1,29 @@
+
+.preloader-progress-bar {
+    top: 0;
+    z-index: 9999;
+    align-items: start;
+    position: fixed;
+    left: 0;
+    width: 100vw;
+    padding: 0px;
+  
+    .progress-value {
+      animation: load 1s normal forwards;
+      box-shadow: 0 10px 40px -10px #fff;
+      border-radius: 3px;
+      background: $primary;
+      height: 3px;
+      width: 100%;
+    }
+  }
+  
+  @keyframes load {
+    0% {
+      width: 0;
+    }
+  
+    100% {
+      width: 100%;
+    }
+  }
