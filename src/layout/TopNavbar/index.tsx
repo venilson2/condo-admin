@@ -1,5 +1,4 @@
 import { FiMenu } from 'react-icons/fi'
-import { Button, NavLink } from 'react-bootstrap'
 import { useThemeContext } from '@/context'
 import { Notifications, ProfileDropdown, SearchBar } from './components'
 import { notifications } from './data'

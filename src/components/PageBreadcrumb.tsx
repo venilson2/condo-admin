@@ -9,7 +9,7 @@ interface PageTitleProps {
 	title: string
 }
 
-const PageBreadcrumb = ({ title, subName }: PageTitleProps) => {
+const PageBreadcrumb = ({ title }: PageTitleProps) => {
 	return (
 		<>
 			<PageMetaData title={title} />

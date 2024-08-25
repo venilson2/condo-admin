@@ -1,13 +1,8 @@
-import { ActivityCard, PageBreadcrumb } from '@/components'
-import { Card, CardBody, Col, Row } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { PageBreadcrumb } from '@/components'
+import { Col, Row } from 'react-bootstrap'
 import Statistics from './components/Statistics'
 import AudienceOverviewChart from './components/AudienceOverviewChart'
 import SessionsDevice from './components/SessionsDevice'
-import ViewByUsers from './components/ViewByUsers'
-import SessionsByChannels from './components/SessionsByChannels'
-import TrafficReports from './components/TrafficReports'
-import BrowserReports from './components/BrowserReports'
 
 const Dashboard = () => {
 	return (

@@ -1,6 +1,5 @@
 import type { IconType } from 'react-icons'
 import {
-	FiGrid,
 	FiLayers,
 	FiHome,
 } from 'react-icons/fi'
