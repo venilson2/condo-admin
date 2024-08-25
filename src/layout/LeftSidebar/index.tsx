@@ -35,24 +35,7 @@ const LeftSidebar = () => {
 			<SimpleBar className="menu-content h-100">
 				<AppMenu menuItems={getMenuItems()} />
 
-				<div className="update-msg text-center">
-					<Link
-						to=""
-						className="float-end close-btn text-white"
-						data-dismiss="update-msg"
-						aria-label="Close"
-						aria-hidden="true"
-					>
-						<i className="mdi mdi-close"></i>
-					</Link>
-					<h5 className="mt-3">Mannat Themes</h5>
-					<p className="mb-3">
-						We Design and Develop Clean and High Quality Web Applications
-					</p>
-					<Link to="" className="btn btn-outline-warning btn-sm">
-						Upgrade your plan
-					</Link>
-				</div>
+
 			</SimpleBar>
 		</div>
 	)

@@ -2,12 +2,12 @@ version: '3'
 
 services:
   frontend:
-    container_name: dastone
+    container_name: condo-admin
     build:
       context: .
       dockerfile: Dockerfile
     networks:
-      - dastonenet
+      - condomanagernet
     ports:
       - "5173:5173"
     volumes:
@@ -17,5 +17,5 @@ services:
     tty: true
 
 networks:
-  dastonenet:
+  condomanagernet:
     driver: bridge
