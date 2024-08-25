@@ -19,12 +19,12 @@ const PageBreadcrumb = ({ title, subName }: PageTitleProps) => {
 						<Row>
 							<Col>
 								<h4 className="page-title">{title}</h4>
-								<ol className="breadcrumb">
+								{/* <ol className="breadcrumb">
 									<li className="breadcrumb-item">
-										<Link to="#">Dastone</Link>
+										<Link to="#">{subName}</Link>
 									</li>
 									<li className="breadcrumb-item active">{subName}</li>
-								</ol>
+								</ol> */}
 							</Col>
 							<div className="col-auto align-self-center d-flex gap-1">
 								<Link

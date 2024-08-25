@@ -34,7 +34,7 @@ export const VERTICAL_MENU_ITEMS: MenuItemType[] = [
 		icon: FiHome,
 	},
 	{
-		key: 'condominium_management',
+		key: 'condo_management',
 		icon: FiLayers,
 		label: 'Gestão do Condominio',
 		isTitle: false,
@@ -42,66 +42,54 @@ export const VERTICAL_MENU_ITEMS: MenuItemType[] = [
 			{
 				key: 'Administrative',
 				label: 'Administrativo',
-				url: '/dashboards/Administrative',
-				parentKey: 'condominium_management-admin',
+				url: '/condo-management/Administrative',
+				parentKey: 'condo_management-admin',
 				children: [
 					{
 						key: 'admin-contracts',
 						label: 'Contratos',
-						url: '/dashboards/administrative/contracts',
-						parentKey: 'condominium_management-admin',
+						url: '/condo-management/administrative/contracts',
+						parentKey: 'condo_management-admin',
 					},
 					{
 						key: 'admin-services',
 						label: 'Serviços',
-						url: '/dashboards/administrative/services',
-						parentKey: 'condominium_management-admin',
+						url: '/condo-management/administrative/services',
+						parentKey: 'condo_management-admin',
 					},
 					{
 						key: 'admin-space_reservations',
 						label: 'Reservas de Espaços',
-						url: '/dashboards/administrative/space-reservations',
-						parentKey: 'condominium_management-admin',
-					},
-					{
-						key: 'admin-circulars',
-						label: 'Circulares',
-						url: '/dashboards/administrative/circulars',
-						parentKey: 'condominium_management-admin',
+						url: '/condo-management/administrative/space-reservations',
+						parentKey: 'condo_management-admin',
 					},
 					{
 						key: 'admin-notifications',
 						label: 'Notificações',
-						url: '/dashboards/administrative/notifications',
-						parentKey: 'condominium_management-admin',
-					},
-					{
-						key: 'admin-assets',
-						label: 'Patrimônios',
-						url: '/dashboards/administrative/assets',
-						parentKey: 'condominium_management-admin',
+						url: '/condo-management/administrative/notifications',
+						parentKey: 'condo_management-admin',
 					}
 				]
 			},
 			{
 				key: 'financial',
 				label: 'Financeiro',
-				url: '/dashboards/financial',
-				parentKey: 'condominium_management-financial',
+				url: '/condo-management/financial',
+				parentKey: 'condo_management-financial',
 				children: []
 			},
 			{
 				key: 'residents',
 				label: 'Moradores',
-				url: '/dashboards/residents',
-				parentKey: 'condominium_management-residents',
+				url: '/condo-management/residents',
+				parentKey: 'condo_management-residents',
 				children: []
 			},
 			{
 				key: 'concierge',
 				label: 'Portaria',
-				url: '/dashboards/concierge',
-				parentKey: 'condominium_management-concierge',
+				url: '/condo-management/concierge',
+				parentKey: 'condo_management-concierge',
 				children: []
 			},
 		],

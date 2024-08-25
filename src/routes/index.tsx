@@ -1,29 +1,15 @@
 import { lazy } from 'react'
 import { Navigate, RouteProps } from 'react-router-dom'
 
-//Dashboards
-const AnalyticsDashboard = lazy(() => import('@/pages/dashboards/Analytics'))
-const SalesDashboard = lazy(() => import('@/pages/dashboards/Sales'))
+//Dashboard
+const Dashboard = lazy(() => import('@/pages/dashboard'))
 
-//Apps
-const Inbox = lazy(() => import('@/pages/apps/email/Inbox'))
-const ReadEmail = lazy(() => import('@/pages/apps/email/ReadEmail'))
-const Chat = lazy(() => import('@/pages/apps/Chat'))
-const ContactList = lazy(() => import('@/pages/apps/ContactList'))
-const FileManager = lazy(() => import('@/pages/apps/FileManager'))
-const Invoice = lazy(() => import('@/pages/apps/Invoice'))
-const Tasks = lazy(() => import('@/pages/apps/Tasks'))
-const Overview = lazy(() => import('@/pages/apps/projects/Overview'))
-const Project = lazy(() => import('@/pages/apps/projects/Project'))
-const KanbanBoard = lazy(() => import('@/pages/apps/projects/KanbanBoard'))
-const Teams = lazy(() => import('@/pages/apps/projects/Teams'))
-const NewProject = lazy(() => import('@/pages/apps/projects/NewProject'))
-const Products = lazy(() => import('@/pages/apps/ecommerce/Products'))
-const ProductList = lazy(() => import('@/pages/apps/ecommerce/ProductList'))
-const Cart = lazy(() => import('@/pages/apps/ecommerce/Cart'))
-const Checkout = lazy(() => import('@/pages/apps/ecommerce/Checkout'))
-const ProductDetail = lazy(() => import('@/pages/apps/ecommerce/ProductDetail'))
-const Calendar = lazy(() => import('@/pages/apps/Calendar'))
+// Condo Management
+const Contracts = lazy(() => import('@/pages/condo-management/administrative/contracts'))
+const Notifications = lazy(() => import('@/pages/condo-management/administrative/notifications'))
+const Services = lazy(() => import('@/pages/condo-management/administrative/services'))
+const SpaceReservations = lazy(() => import('@/pages/condo-management/administrative/space-reservations'))
+
 const Login = lazy(() => import('@/pages/authentication/Login'))
 const Register = lazy(() => import('@/pages/authentication/Register'))
 const RecoverPW = lazy(() => import('@/pages/authentication/RecoverPW'))
@@ -41,117 +27,38 @@ const dashboardRoutes: RoutesProps[] = [
 	{
 		path: '/',
 		name: 'Home Page',
-		element: <Navigate to="/dashboards/analytics" />,
+		element: <Navigate to="/dashboard" />,
 	},
 	{
-		path: '/dashboards/analytics',
+		path: '/dashboard',
 		name: 'Dashboard',
-		element: <AnalyticsDashboard />,
-	},
-	{
-		path: '/dashboards/sales',
-		name: 'Sales',
-		element: <SalesDashboard />,
+		element: <Dashboard />,
 	},
 ]
 
-const appsRoutes: RoutesProps[] = [
+const condominiummManagementRoutes: RoutesProps[] = [
 	{
-		path: '/apps/email/inbox',
-		name: 'Inbox',
-		element: <Inbox />,
+		path: '/condo-management/administrative/contracts',
+		name: 'Contracts',
+		element: <Contracts />,
 	},
 	{
-		path: '/apps/email/read',
-		name: 'Read Email',
-		element: <ReadEmail />,
+		path: '/condo-management/administrative/notifications',
+		name: 'Notifications',
+		element: <Notifications />,
 	},
 	{
-		path: '/apps/chat',
-		name: 'Chat',
-		element: <Chat />,
+		path: '/condo-management/administrative/services',
+		name: 'Services',
+		element: <Services />,
 	},
 	{
-		path: '/apps/calendar',
-		name: 'Calendar',
-		element: <Calendar />,
-	},
-	{
-		path: '/apps/contact-list',
-		name: 'Cantacts List',
-		element: <ContactList />,
-	},
-	{
-		path: '/apps/file-manager',
-		name: 'File Manager',
-		element: <FileManager />,
-	},
-	{
-		path: '/apps/invoice',
-		name: 'Invoice',
-		element: <Invoice />,
-	},
-	{
-		path: '/apps/tasks',
-		name: 'Tasks',
-		element: <Tasks />,
-	},
-	{
-		path: '/apps/projects/overview',
-		name: 'Overview',
-		element: <Overview />,
-	},
-	{
-		path: '/apps/projects/project',
-		name: 'Project',
-		element: <Project />,
-	},
-	{
-		path: '/apps/projects/board',
-		name: 'Project',
-		element: <KanbanBoard />,
-	},
-	{
-		path: '/apps/projects/teams',
-		name: 'Teams',
-		element: <Teams />,
-	},
-	{
-		path: '/apps/projects/files',
-		name: 'Teams',
-		element: <FileManager />,
-	},
-	{
-		path: '/apps/projects/new-project',
-		name: 'New Project',
-		element: <NewProject />,
-	},
-	{
-		path: '/apps/ecommerce/products',
-		name: 'Products',
-		element: <Products />,
-	},
-	{
-		path: '/apps/ecommerce/product-list',
-		name: 'Product List',
-		element: <ProductList />,
-	},
-	{
-		path: '/apps/ecommerce/cart',
-		name: 'Cart',
-		element: <Cart />,
-	},
-	{
-		path: '/apps/ecommerce/checkout',
-		name: 'Checkout',
-		element: <Checkout />,
-	},
-	{
-		path: '/apps/ecommerce/product-detail',
-		name: 'Product Detail',
-		element: <ProductDetail />,
-	},
+		path: '/condo-management/administrative/space-reservations',
+		name: 'Space Reservations',
+		element: <SpaceReservations />
+	}
 ]
+
 
 const authRoutes: RoutesProps[] = [
 	{
@@ -193,7 +100,7 @@ const authRoutes: RoutesProps[] = [
 
 const allAdminRoutes = [
 	...dashboardRoutes,
-	...appsRoutes,
+	...condominiummManagementRoutes
 ]
 
 const allBlankRoutes = [...authRoutes]
