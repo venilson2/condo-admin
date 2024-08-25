@@ -33,13 +33,6 @@ const TopNavbar = () => {
 								<FiMenu className="align-self-center topbar-icon" />
 							</button>
 						</li>
-						<li className="creat-btn">
-							<NavLink>
-								<Button variant="soft-primary" size="sm" role="button">
-									<i className="fas fa-plus me-2"></i>New Task
-								</Button>
-							</NavLink>
-						</li>
 					</ul>
 				</nav>
 			</div>
