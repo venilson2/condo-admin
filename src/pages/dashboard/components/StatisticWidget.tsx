@@ -2,11 +2,8 @@ import { type StatisticType } from '../types'
 import { Card, CardBody, Col, Row } from 'react-bootstrap'
 
 const StatisticWidget = ({
-	change,
 	state,
-	subTitle,
 	title,
-	variant,
 	icon,
 }: StatisticType) => {
 	const Icon = icon
