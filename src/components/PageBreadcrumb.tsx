@@ -2,7 +2,15 @@ import { Col, Row } from 'react-bootstrap'
 import { PageMetaData } from '.'
 import { Link } from 'react-router-dom'
 
-import { FiCalendar, FiDownload } from 'react-icons/fi'
+import { FiCalendar } from 'react-icons/fi'
+
+import { format } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
+
+function getCurrentDate() {
+    const now = new Date();
+    return format(now, "dd 'de' MMMM", { locale: ptBR });
+}
 
 interface PageTitleProps {
 	subName: string
@@ -32,18 +40,15 @@ const PageBreadcrumb = ({ title }: PageTitleProps) => {
 									className="btn btn-sm btn-outline-primary"
 									id="Dash_Date"
 								>
-									<span className="ay-name" id="Day_Name">
-										Today:
-									</span>
 									&nbsp;
 									<span className="" id="Select_date">
-										Jan 11
+										{getCurrentDate()}
 									</span>
 									<FiCalendar className="align-self-center icon-xs ms-1" />
 								</Link>
-								<Link to="#" className="btn btn-sm btn-outline-primary">
+								{/* <Link to="#" className="btn btn-sm btn-outline-primary">
 									<FiDownload className="align-self-center icon-xs" />
-								</Link>
+								</Link> */}
 							</div>
 						</Row>
 					</div>

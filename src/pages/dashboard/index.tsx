@@ -8,7 +8,7 @@ const Dashboard = () => {
 	return (
 		<>
 			<PageBreadcrumb subName="Dashboard" title="Dashboard" />
-			<Row>
+			<Row className="row">
 				<Col lg={9}>
 					<Statistics />
 					<AudienceOverviewChart />

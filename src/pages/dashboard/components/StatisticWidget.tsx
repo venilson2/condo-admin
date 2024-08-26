@@ -2,11 +2,8 @@ import { type StatisticType } from '../types'
 import { Card, CardBody, Col, Row } from 'react-bootstrap'
 
 const StatisticWidget = ({
-	change,
 	state,
-	subTitle,
 	title,
-	variant,
 	icon,
 }: StatisticType) => {
 	const Icon = icon
@@ -17,7 +14,7 @@ const StatisticWidget = ({
 					<Col>
 						<p className="text-dark mb-0 fw-semibold">{title}</p>
 						<h3 className="m-0">{state}</h3>
-						<p className="mb-0 text-truncate text-muted">
+						{/* <p className="mb-0 text-truncate text-muted">
 							<span className={`text-${variant}`}>
 								{variant == 'danger' ? (
 									<i className="mdi mdi-trending-down" />
@@ -27,7 +24,7 @@ const StatisticWidget = ({
 								{change}%
 							</span>{' '}
 							{subTitle}
-						</p>
+						</p> */}
 					</Col>
 					<div className="col-auto align-self-center">
 						<div className="report-main-icon bg-light-alt">

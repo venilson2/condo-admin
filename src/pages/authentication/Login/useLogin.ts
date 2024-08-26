@@ -17,25 +17,26 @@ export default function useLogin() {
 	const { isAuthenticated, saveSession } = useAuthContext()
 
 	const schemaResolver = yup.object().shape({
-		email: yup
+		username: yup
 			.string()
-			.email('Please enter a valid email')
-			.required('Please enter Username'),
-		password: yup.string().required('Please enter Password'),
+			.required('Por favor digite seu username'),
+		password: yup.string().required('Por favor digite sua senha'),
+		subdomain: yup.string().required('Por favor digite o código do dominio'),
 	})
 
 	const { control, handleSubmit } = useForm({
 		resolver: yupResolver(schemaResolver),
 		defaultValues: {
-			email: 'admin@mannatthemes.com',
+			username: 'admin',
 			password: 'password',
+			subdomain: '001'
 		},
 	})
 
 	type LoginFormFields = yup.InferType<typeof schemaResolver>
 
 	// const redirectUrl = useMemo(() => (location.state?.from.pathname, location.pathname ?? "/"), [location.state]);
-	const redirectUrl = searchParams.get('next') ?? '/dashboards/analytics'
+	const redirectUrl = searchParams.get('next') ?? '/dashboard'
 
 	const login = handleSubmit(async function (values: LoginFormFields) {
 		setLoading(true)
